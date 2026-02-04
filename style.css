@@ -1,29 +1,11 @@
-
-.nav {
-  background: #111827;
-  padding: 8px 0;          /* reduce top & bottom */
-  margin: 0;
-  text-align: center;
-}
-
-.nav a {
-  color: white;
-  margin-right: 12px; 
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-
+/* ===== GLOBAL RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== BODY ===== */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f4f6f8;
@@ -31,29 +13,89 @@ body {
   line-height: 1.6;
 }
 
+/* ===== NAVBAR ===== */
+.nav {
+  background: #111827;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.nav a {
+  color: #ffffff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== HERO HEADER ===== */
 .hero {
-  min-height: 60vh;        /* was 70/85vh */
-  padding: 20px 20px;      /* reduce padding */
-  justify-content: center; /* keep centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 28px 20px;
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 8px;
 }
 
 .hero p {
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 20px;
 }
 
-.hero span {
-  font-size: 14px;
-  opacity: 0.8;
+/* ===== HERO BUTTONS ===== */
+.hero-actions {
+  display: flex;
+  gap: 16px;
 }
 
+.btn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ===== SECTIONS ===== */
 .section {
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
   padding: 40px 20px;
 }
 
@@ -62,23 +104,25 @@ body {
   color: #111827;
 }
 
+/* ===== SKILLS ===== */
 .skills {
   list-style: none;
 }
 
 .skills li {
-  background: #fff;
+  background: #ffffff;
   padding: 10px 15px;
   margin-bottom: 10px;
   border-left: 4px solid #111827;
 }
 
+/* ===== CARDS (PORTFOLIO) ===== */
 .card {
-  background: #fff;
+  background: #ffffff;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
@@ -93,72 +137,31 @@ body {
   font-weight: bold;
 }
 
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 20px;
   background: #111827;
-  color: white;
+  color: #ffffff;
   font-size: 14px;
 }
-/* ===== HERO HEADER ONLY ===== */
 
-.hero {
-  min-height: 85vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #f9f9f9, #ffffff);
-}
+/* ===== RESPONSIVE (MOBILE) ===== */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.3rem;
+  }
 
-.hero h1 {
-  font-size: 3.2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
+  .hero h2 {
+    font-size: 1.3rem;
+  }
 
-.hero h2 {
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1rem;
-  color: #777;
-  letter-spacing: 0.5px;
-  margin-bottom: 30px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 16px;
-}
-
-.btn {
-  padding: 12px 26px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn.primary {
-  background-color: #000;
-  color: #fff;
-}
-
-.btn.secondary {
-  border: 1px solid #000;
-  color: #000;
-  background: transparent;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+  .hero-actions {
+    flex-direction: column;
+  }
 }
 
