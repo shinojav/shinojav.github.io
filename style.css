@@ -14,22 +14,53 @@ body {
 }
 
 /* ===== NAVBAR ===== */
+/* ===== NAVBAR (BEAUTIFIED) ===== */
 .nav {
   background: #111827;
-  padding: 8px 0;
-  text-align: center;
+  padding: 10px 0;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
 }
 
 .nav a {
-  color: #ffffff;
-  margin: 0 12px;
+  color: #e5e7eb;
   text-decoration: none;
-  font-weight: 600;
   font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 2px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
 }
 
 .nav a:hover {
-  text-decoration: underline;
+  color: #ffffff;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
+
+.nav a.active {
+  color: #ffffff;
 }
 
 /* ===== HERO HEADER ===== */
