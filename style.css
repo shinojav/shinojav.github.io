@@ -1,17 +1,14 @@
-body {
-  margin: 0;
-  padding: 0;
-}
 
 .nav {
   background: #111827;
-  padding: 15px;
+  padding: 8px 0;          /* reduce top & bottom */
+  margin: 0;
   text-align: center;
 }
 
 .nav a {
   color: white;
-  margin: 0 15px;
+  margin-right: 12px; 
   text-decoration: none;
   font-weight: 600;
 }
@@ -22,9 +19,9 @@ body {
 
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -35,10 +32,9 @@ body {
 }
 
 .hero {
-  background: #111827;
-  color: white;
-  padding: 70px 20px;
-  text-align: center;
+  min-height: 60vh;        /* was 70/85vh */
+  padding: 20px 20px;      /* reduce padding */
+  justify-content: center; /* keep centering */
 }
 
 .hero h1 {
