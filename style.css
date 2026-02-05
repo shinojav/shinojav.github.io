@@ -38,6 +38,12 @@ body {
   transition: color 0.3s ease;
 }
 
+.nav a.active {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 4px;
+}
+
+
 /* Hover underline animation */
 .nav a::after {
   content: "";
